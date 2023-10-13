@@ -239,7 +239,7 @@ function drawCompass(pos) {
         this.fillText(text, x, y);
     }
 
-    drawWatermark.call(ctx, 'politicalbdsm.org', 10, height - 10, '#000');
+    drawWatermark.call(ctx, 'https://angelsflyinhell.github.io/bdsmcompass', 10, height - 10, '#000');
 
     // draw point
     const drawPoint = function (x, y, radius, color) {
