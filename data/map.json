@@ -4,7 +4,8 @@
         "hbondage": 0.5
     },
     "Brat": {
-
+        "fdom": 0.5,
+        "mdom": 0.5
     },
     "Submissive": {
         "fdom": 0.5,
@@ -21,11 +22,11 @@
         "humilitaion": 1
     },
     "Experimentalist": {
-        "group": 0.5,
-        "latex": 0.5,
-        "uniforms": 0.5,
-        "ftoys": 0.5,
-        "mtoys": 0.5
+        "group": 0.2,
+        "latex": 0.2,
+        "uniforms": 0.2,
+        "ftoys": 0.2,
+        "mtoys": 0.2
     },
     "Switch": {
         "fdom": 0.25,
@@ -34,8 +35,8 @@
         "msub": 0.25
     },
     "Brat tamer": {
-        "fsub": 0.25,
-        "msub": 0.25
+        "fsub": 0.5,
+        "msub": 0.5
     },
     "Dominant": {
         "fsub": 0.5,
@@ -48,7 +49,7 @@
         "sadism": 1
     },
     "Degrader": {
-
+        "humilitaion": 1
     },
     "Voyeur": {
         "voyeurism": 1
@@ -60,10 +61,12 @@
         "24/7power": 1
     },
     "Primal (Hunter)": {
-
+        "rape": 0.1,
+        "petplay": 0.2,
+        "bestiality": 0.1
     },
     "Master/Mistress": {
-
+        "24/7power": 1
     },
     "Ageplayer": {
         "age": 1
@@ -79,6 +82,9 @@
         "petplay": 1
     },
     "Primal (Prey)": {
+        "rape": 0.1,
+        "petplay": 0.2,
+        "bestiality": 0.1
     },
     "Slave": {
         "24/7power": 1
