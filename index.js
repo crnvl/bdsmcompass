@@ -174,6 +174,10 @@ function drawCompass(pos) {
     const ctx = canvas.getContext('2d');
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
+    // fully white background
+    ctx.fillStyle = '#ffffff';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
     const width = canvas.width;
     const height = canvas.height;
 
@@ -250,8 +254,8 @@ function drawCompass(pos) {
     const normalized_x = ((pos.x + 1) / 2) * width;
     const normalized_y = ((pos.y * -1 + 1) / 2) * height;
 
-    drawPoint.call(ctx, normalized_x, normalized_y, 12, '#fff');
-    drawPoint.call(ctx, normalized_x, normalized_y, 10, '#000');
+    drawPoint.call(ctx, normalized_x, normalized_y, 30, '#92B0FF' + '80');
+    drawPoint.call(ctx, normalized_x, normalized_y, 12, '#5282FE');
 
     document.getElementById('results').style.display = 'flex'
 }
