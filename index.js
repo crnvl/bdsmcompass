@@ -2,14 +2,14 @@ const [
     data,
     map,
 ] = await Promise.all([
-    fetch("/data/data.json", {
+    fetch("/sbdmcompass/data/data.json", {
         method: "GET",
         headers: {
             "Content-Type": "application/json",
         },
     })
         .then((response) => response.json()),
-    fetch("/data/map.json", {
+    fetch("/sbdmcompass/data/map.json", {
         method: "GET",
         headers: {
             "Content-Type": "application/json",
