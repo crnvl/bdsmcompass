@@ -1,0 +1,86 @@
+{
+    "Rope bunny": {
+        "lbondage": 0.5,
+        "hbondage": 0.5
+    },
+    "Brat": {
+
+    },
+    "Submissive": {
+        "fdom": 0.5,
+        "mdom": 0.5
+    },
+    "Masochist": {
+        "masochism": 1
+    },
+    "Rigger": {
+        "lbondage": 0.5,
+        "hbondage": 0.5
+    },
+    "Degradee": {
+        "humilitaion": 1
+    },
+    "Experimentalist": {
+        "group": 0.5,
+        "latex": 0.5,
+        "uniforms": 0.5,
+        "ftoys": 0.5,
+        "mtoys": 0.5
+    },
+    "Switch": {
+        "fdom": 0.25,
+        "mdom": 0.25,
+        "fsub": 0.25,
+        "msub": 0.25
+    },
+    "Brat tamer": {
+        "fsub": 0.25,
+        "msub": 0.25
+    },
+    "Dominant": {
+        "fsub": 0.5,
+        "msub": 0.5
+    },
+    "Exhibitionist": {
+        "exhibitionism": 1
+    },
+    "Sadist": {
+        "sadism": 1
+    },
+    "Degrader": {
+
+    },
+    "Voyeur": {
+        "voyeurism": 1
+    },
+    "Non-monogamist": {
+        "group": 1
+    },
+    "Owner": {
+        "24/7power": 1
+    },
+    "Primal (Hunter)": {
+
+    },
+    "Master/Mistress": {
+
+    },
+    "Ageplayer": {
+        "age": 1
+    },
+    "Daddy/Mommy": {
+        "incest": 1
+    },
+    "Boy/Girl": {
+        "age": 0.5,
+        "pedophilia": 0.5
+    },
+    "Pet": {
+        "petplay": 1
+    },
+    "Primal (Prey)": {
+    },
+    "Slave": {
+        "24/7power": 1
+    }
+}

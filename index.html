@@ -36,10 +36,10 @@
         </div>
 
         <div class="form">
-            <form>
+            <form id="form">
                 <!-- optional select input-->
                 <div class="datapool">
-                    <p>(optional) Select a data pool for higher accuracy results.</p>
+                    <p>Select a data pool for higher accuracy results.</p>
 
                     <select name="datapool" id="datapool">
                         <option value="combined">Combined</option>
@@ -60,15 +60,17 @@
         </div>
 
         <!-- results -->
-        <div class="results">
+        <div class="results" style="display: none;" id="results">
             <h1>Results</h1>
             <p>
-                Here's your estimated political orientation based on your <a href="https://bdsmtest.org">bdsmtest.org</a> results. 
-                Please note, that this tool is only meant for fun and is not meant to be taken seriously. 
-                While the data is generally based on a study, a real connection between BDSM and political orientation is not proven.
+                Here's your estimated political orientation based on your <a
+                    href="https://bdsmtest.org">bdsmtest.org</a> results.
+                Please note, that this tool is only meant for fun and is not meant to be taken seriously.
+                While the data is generally based on a study, a real connection between BDSM and political orientation
+                is not proven.
             </p>
             <!-- political compass render -->
-            <canvas id="political-compass" style="width: 512px; height: 512px;" width="1024" height="1024"></canvas>
+            <canvas id="political-compass" style="max-width: 512px; max-height: 512px;" width="1024" height="1024"></canvas>
 
             <div class="buttons">
                 <button id="download">
@@ -80,62 +82,20 @@
                     </svg>
                     Save</button>
                 <button id="share">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor"
-                        style="width: 20px; height: 20px; margin-right: 10px; margin-bottom: 2px;">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z" />
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg" fill="white"
+                        viewBox="0 0 20 20"
+                        style="width: 20px; height: 20px; margin-right: 10px; margin-bottom: 2px;"
+                        >
+                        <path
+                            d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0 0 20 3.92a8.19 8.19 0 0 1-2.357.646 4.118 4.118 0 0 0 1.804-2.27 8.224 8.224 0 0 1-2.605.996 4.107 4.107 0 0 0-6.993 3.743 11.65 11.65 0 0 1-8.457-4.287 4.106 4.106 0 0 0 1.27 5.477A4.073 4.073 0 0 1 .8 7.713v.052a4.105 4.105 0 0 0 3.292 4.022 4.095 4.095 0 0 1-1.853.07 4.108 4.108 0 0 0 3.834 2.85A8.233 8.233 0 0 1 0 16.407a11.615 11.615 0 0 0 6.29 1.84">
+                        </path>
                     </svg>
                     Share</button>
             </div>
         </div>
     </div>
 </body>
-
-<script>
-    // draw political compass
-    const canvas = document.getElementById('political-compass');
-
-    const ctx = canvas.getContext('2d');
-    const width = canvas.width;
-    const height = canvas.height;
-
-    // draw fields
-    const drawRect = function (x, y, w, h, color) {
-        // 25% opacity
-        this.fillStyle = color + '40';
-        this.fillRect(x, y, w, h);
-    }
-
-    drawRect.call(ctx, 0, 0, width / 2, height / 2, '#ff0000');
-    drawRect.call(ctx, width / 2, 0, width / 2, height / 2, '#0000ff');
-    drawRect.call(ctx, 0, height / 2, width / 2, height / 2, '#00ff00');
-    drawRect.call(ctx, width / 2, height / 2, width / 2, height / 2, '#ffff00');
-
-    // draw clean 1px lines
-    const drawLine = function (x1, y1, x2, y2, color) {
-        this.beginPath();
-        this.moveTo(x1, y1);
-        this.lineTo(x2, y2);
-        this.strokeStyle = color;
-        this.stroke();
-    }
-
-    drawLine.call(ctx, width / 2, 0, width / 2, height, '#000');
-    drawLine.call(ctx, 0, height / 2, width, height / 2, '#000');
-
-    // draw text
-    const drawText = function (text, x, y, color) {
-        this.fillStyle = color;
-        this.font = '32px Arial';
-        this.fillText(text, x, y);
-    }
-
-    drawText.call(ctx, 'Left', 10, height / 2 - 10, '#000');
-    drawText.call(ctx, 'Right', width - 80, height / 2 - 10, '#000');
-    drawText.call(ctx, 'Libertarian', width / 2 - 70, 50, '#000');
-    drawText.call(ctx, 'Authoritarian', width / 2 - 80, height - 10, '#000');
-</script>
 
 <style>
     @media (min-width: 768px) {
@@ -145,7 +105,6 @@
         }
     }
 
-    /* navbar */
     .navbar {
         width: 100%;
         top: 0;
@@ -197,6 +156,19 @@
         color: #6b6b6b;
     }
 
+    .form .datapool select {
+        padding: 10px;
+        border: 1px solid #000;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        font-size: 16px;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .form textarea::placeholder {
+        font-family: 'Poppins', sans-serif;
+    }
+
     .form textarea {
         height: 200px;
         padding: 10px;
@@ -230,6 +202,14 @@
     .results canvas {
         border-radius: 5px;
         box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    /* rescale canvas to be responsive for smaller screens */
+    @media (max-width: 768px) {
+        .results canvas {
+            width: 100%;
+            height: auto;
+        }
     }
 
     .results .buttons {

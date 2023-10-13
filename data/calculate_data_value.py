@@ -1,8 +1,8 @@
 CENTER_POINT = (634, 329)
 
 FACTOR = 0.01
-X_PIXEL = 45.4 # 45.4 pixel = .01 value on x axis
-Y_PIXEL = 29.8 # 29.8 pixel = .01 value on y axis
+X_PIXEL = 153 # 153 pixel = .01 value on x axis
+Y_PIXEL = 30.6 # 30.6 pixel = .01 value on y axis
 
 def main():
     while True:
